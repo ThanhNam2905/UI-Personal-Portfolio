@@ -2,9 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 :root {
-
+    --green-color: #27ae60;
+    --black-color: #444;
+    --light-color: #777;
+    --bg-color: #e6e6e6;
+    --border: 0.13rem solid rgba(0, 0, 0, 0.1);
+    --box-shadow: 0.4rem 0.4rem 1rem #ccc, -0.4rem -0.4rem 1rem #fff;
+    --box-shadow-inset: 0.4rem 0.4rem 1rem #ccc inset, -0.4rem -0.4rem 1rem #fff inset;
 }
 
+
+/* Base CSS */
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -18,12 +26,563 @@
 }
 
 *::selection {
-
+    background: var(--green-color);
+    color: #eee;
 }
 
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-    scroll-padding-top: 7rem;
+    /* scroll-padding-top: 7rem; */
     overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    padding-left: 30rem;
+}
+body.active {
+    --black-color: #fff;
+    --light-color: #ddd;
+    --bg-color: #222;
+    --border: 0.13rem solid rgba(0, 0, 0, 0.4);
+    --box-shadow: 0.4rem 0.4rem 1rem #111, -0.4rem -0.4rem 1rem #333;
+    --box-shadow-inset: 0.4rem 0.4rem 1rem #111 inset, -0.4rem -0.4rem 1rem #333 inset;
+}
+
+section {
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    border-radius: 4rem;
+    font-size: 1.85rem;
+    color: var(--black-color);
+    box-shadow: var(--box-shadow);
+    display: inline-block;
+    cursor: pointer;
+}
+.btn:hover {
+    box-shadow: var(--box-shadow-inset);
+    color: var(--green-color);
+}
+
+h1.heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 5rem;
+    color: var(--black-color);
+    padding-bottom: 1rem;
+    text-shadow: 0 0.4rem 0.8rem var(--green-color);
+}
+h1.heading span {
+    text-transform: uppercase;
+    color: var(--green-color);
+    text-shadow: 0 0.4rem 0.8rem var(--light-color);
+}
+
+/* CSS Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 30rem;
+    text-align: center;
+    background: var(--bg-color);
+    padding: 2rem;
+    height: 100%;
+    border-right: var(--border);
+}
+.header .user img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 1rem;
+    margin-top: 3rem;
+}
+.header .user h3 {
+    font-size: 2.5rem;
+    color: var(--black-color);
+}
+.header .user p {
+    font-size: 1.7rem;
+    color: var(--green-color);
+    margin: 1.2rem 0;
+}
+.header .navbar a {
+    font-size: 2rem;
+    color: var(--black-color);
+    display: block;
+    background: transparent;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: 6rem;
+    padding: 0.7rem 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+}
+.header .navbar a:hover {
+    box-shadow: var(--box-shadow-inset);
+}
+.header #menu-bar {
+    position: fixed;
+    top: 1.7rem;
+    left: 2.3rem;
+    z-index: 1000;
+    font-size: 2.2rem;
+    color: var(--black-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    background: var(--bg-color);
+}
+.header #menu-bar:hover {
+    box-shadow: var(--box-shadow-inset);
+    color: var(--green-color);
+}
+
+/* CSS Theme toggler */
+#theme-toggler {
+    position: fixed;
+    top: 1.7rem;
+    right: 2.3rem;
+    z-index: 1000;
+    font-size: 2.2rem;
+    color: var(--black-color);
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    background: var(--bg-color);
+}
+#theme-toggler:hover {
+    box-shadow: var(--box-shadow-inset);
+    color: var(--green-color);
+}
+
+/* CSS Home */
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.home .home__content h1 {
+    font-size: 6.5rem;
+    color: var(--black-color);
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+.home .home__content p {
+    font-size: 2.8rem;
+    color: var(--green-color);
+    margin-bottom: 0.5rem;
+    text-transform: none;
+}
+.home .home__share-links {
+    position: relative;
+    top: 8rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem 2rem;
+}
+.home .home__share-links a {
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    margin: 0 0.8rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+    font-size: 2.5rem;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--black-color);
+    transition: 0.3s ease;
+}
+.home .home__share-links a:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+.home .home__share-links a:nth-child(1):hover {
+    background: #1877F2;
+    box-shadow: 0.4rem 0.4rem 1rem #1877F2;
+}
+.home .home__share-links a:nth-child(2):hover {
+    background: #0099FF;
+    box-shadow: 0.4rem 0.4rem 1rem #0099FF;
+}
+.home .home__share-links a:nth-child(3):hover {
+    background: linear-gradient(45deg, #ea4335, #34a853, #fbbc05);
+    box-shadow: 0.4rem 0.4rem 1rem #34a853;
+}
+.home .home__share-links a:nth-child(4):hover {
+    background: #E4405F;
+    box-shadow: 0.4rem 0.4rem 1rem #E4405F;
+}
+.home .home__share-links a:nth-child(5):hover {
+    background: #34465D;
+    box-shadow: 0.4rem 0.4rem 1rem #34465D;
+}
+
+/* CSS About */
+.about .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 0 2.5rem;
+    align-items: center;
+}
+.about .about__info {
+    flex: 1 1 30rem;
+    padding: 2rem;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+}
+.about .about__info .box {
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow-inset);
+    margin-bottom: 2rem;
+    border-radius: 4rem;
+    border: var(--border);
+}
+.about .about__info .box:hover {
+    box-shadow: var(--box-shadow);
+}
+.about .about__info .box:hover i,
+.about .about__info .box:hover span,
+.about .about__info .box:hover a,
+.about .about__info .box:hover address {
+    color: var(--green-color);
+}
+
+.about .about__info .box i {
+    font-size: 2.2rem;
+    color: var(--light-color);
+    width: 4rem;
+}
+.about .about__info .box span, a, address {
+    font-size: 1.6rem;
+    color: var(--black-color);
+    text-transform: none;
+}
+.about .about__content {
+    flex: 1 1 40rem;
+}
+.about .about__content .box h3 {
+    font-size: 3rem;
+    color: var(--black-color);
+    text-transform: uppercase;
+    line-height: 1.7;
+}
+.about .about__content .box p {
+    font-size: 1.7rem;
+    color: var(--light-color);
+    line-height: 1.8;
+    text-transform: none;
+}
+.about .about__content .box p.school-name {
+    color: var(--green-color);
+}
+
+/* CSS Skills */
+.skills .row  {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: 1rem 2.5rem;
+}
+.skills .row .progress {
+    flex: 1 1 40rem;
+}
+.skills .progress h1 {
+    font-size: 3rem;
+    color: var(--light-color);
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+.skills .progress h3 {
+    font-size: 2rem;
+    color: var(--black-color);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .progress .bar {
+    height: 3rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    border-radius: 4rem;
+    padding: 0.7rem 1rem;
+    margin: 1rem 0;
+}
+.skills .progress .bar span {
+    height: 100%;
+    display: block;
+    background: var(--green-color);
+    border-radius: 4rem;
+}
+.skills .progress.programming-languages .box:nth-child(1) .bar span, .box:nth-child(5) .bar span {
+    width: 90%;
+}
+.skills .progress.programming-languages .box:nth-child(2) .bar span, .box:nth-child(3) .bar span {
+    width: 60%;
+}
+.skills .progress.programming-languages .box:nth-child(4) .bar span, .box:nth-child(6) .bar span {
+    width: 70%;
+}
+.skills .progress.others .box:nth-child(1) .bar span {
+    width: 70%;
+}
+.skills .progress.others .box:nth-child(2) .bar span, .box:nth-child(3) .bar span {
+    width: 60%;
+}
+
+/* CSS Portfolio */
+.portfolio .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 2rem;
+}
+.portfolio .box-container .box {
+    height: 25rem;
+    box-shadow: var(--box-shadow);
+    border: 0.8rem solid transparent;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.portfolio .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.portfolio .box-container .box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    transform: scale(0);
+}
+.portfolio .box-container .box:hover .content {
+    opacity: 1;
+    transform: scale(1);
+}
+.portfolio .box-container .box .content h4 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black-color);
+    transform: translateY(-5rem);
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+.portfolio .box-container .box:hover .content h4 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* CSS Contact */
+.contact form {
+    margin: 1rem auto;
+    max-width: 70rem;
+    border-radius: 1rem;
+    border: var(--border);
+    background: none;
+    box-shadow: var(--box-shadow);
+    padding: 3rem;
+}
+.contact form .form-control, textarea {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.7rem;
+    text-transform: none;
+    margin-bottom: 1.8rem;
+    border-radius: 1rem;
+    background: var(--bg-color);
+    box-shadow: var(--box-shadow);
+    color: var(--black-color);
+}
+.contact form textarea {
+    height: 16rem;
+    resize: none;
+}
+.contact form .form-control:focus, textarea:focus {
+    box-shadow: var(--box-shadow-inset);
+    color: var(--green-color);
+    box-shadow: 0.4rem 0.4rem 1rem var(--green-color);
+}
+
+/* CSS Footer */
+.footer .footer-credit {
+    text-align: center;
+    padding: 2rem 2rem;
+    border-top: var(--border);
+}
+.footer .footer-credit p {
+    font-size: 2rem;
+    text-transform: none;
+    color: var(--black-color);
+}
+.footer .footer-credit span {
+    color: var(--green-color);
+    font-style: italic;
+}
+
+/* CSS Scroll Top */
+#scroll-top {
+    position: fixed;
+    top: calc(100% - 11rem);
+    right: -120%;
+    z-index: 9999;
+    padding: 1rem 1.6rem;
+    font-size: 3rem;
+    color: #fff;
+    background: var(--green-color);
+    border-radius: 50%;
+    border: 0.2rem solid var(--bg-color);
+    box-shadow: var(--box-shadow);
+    cursor: context-menu;
+    transition: 1s linear;
+}
+#scroll-top:hover {
+    color: var(--green-color);
+    background: #fff;
+    border: 0.2rem dashed var(--green-color);
+    box-shadow: var(--box-shadow-inset);
+}
+#scroll-top.active {
+    right: 3.5rem;
+    cursor: pointer;
+}
+
+/* CSS Loading Page */
+#loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+#loading-page.active {
+    top: -110%;
+}
+
+/* Responsive media queries */
+@media (max-width: 1024px) {
+    html {
+        font-size: 60.5%;
+    }
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 57.5%;
+    }
+    body {
+        padding-left: 0;
+    }
+
+    .header {
+        left: -110%;
+    }
+    .header #menu-bar {
+        display: initial;
+    }
+    .header #menu-bar.fa-times {
+        font-size: 2.8rem;  
+    }
+    .header #menu-bar.fa-times:hover {
+        transform: rotate(180deg);
+    }
+    .header.active {
+        left: 0;
+    }
+}
+
+@media (max-width: 769px) {
+    html {
+        font-size: 55.5%;
+    }
+
+    #scroll-top {
+        font-size: 2.5rem;
+    }
+    #scroll-top.active {
+        right: 3rem;
+    }
+}
+
+@media (max-width: 601px) {
+    html {
+        font-size: 54%;
+    }
+}
+
+@media (max-width: 415px) {
+    html {
+        font-size: 51.5%;
+    }
+
+    .header {
+        width: 100%;
+        border-right: none;
+    }
+
+    .about .row {
+        padding: 0 0.5rem;
+    }
+    .about .about__info {
+        width: 100%;
+    }
+    .about .about__info .box a, address {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .skills .row  {
+        padding: 0 0.5rem;
+    }
+    .skills .progress h1 {
+        font-size: 2.4rem;
+    }
+
+    #scroll-top {
+        font-size: 2.2rem;
+    }
+    #scroll-top.active {
+        right: 2.2rem;
+    }
 }

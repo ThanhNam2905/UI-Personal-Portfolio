@@ -11,9 +11,236 @@
 
     <!-- Custom style CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/favicon-portfolio.png" type="image/x-icon">
 </head>
 <body>
+
+    <!-- Scroll to top -->
+    <div id="scroll-top" class="fas fa-arrow-up"></div>
+
+    <!-- Loading page -->
+    <div id="loading-page">
+        <img src="./images/loader-page.gif" alt="">
+    </div>
     
+    <!-- Header section start -->
+    <header class="header">
+        <!-- Avatar -->
+        <div class="user">
+            <img src="./images/flandre-18.jpg" alt="">
+            <h3>Nguyễn Thành Nam</h3>
+            <p>Fresher - Fontend Developer</p>
+        </div>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#skills">skills</a>
+            <a href="#portfolio">portfolio</a>
+            <a href="#contact">contact</a>
+        </nav>
+        <!-- Menu-bar -->
+        <div class="fas fa-bars" id="menu-bar"></div>
+    </header>
+    <!-- Header section end -->
+
+    <!-- Theme color toggler -->
+    <div id="theme-toggler" class="fas fa-moon"></div>
+
+    <main>
+        <!-- Home section start -->
+        <section class="home" id="home">
+            <div class="home__content">
+                <h1>Front-end Developer <i class="fas fa-code"></i></h1>
+                <p>Hi, my name is Nguyễn Thành Nam. I am a fresher front-end developer</p>
+                <a href="#" class="btn">Download CV</a>
+            </div>
+            <div class="home__share-links">
+                <a href="#" title="Follow Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="Follow Messager"><i class="fab fa-facebook-messenger"></i></a>
+                <a href="#" title="Follow Gmail"><i class="far fa-envelope"></i></a>
+                <a href="#" title="Follow Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="Follow Github"><i class="fab fa-github"></i></a>
+            </div>
+        </section>
+        <!-- Home section end -->
+
+        <!-- About section start -->
+        <section class="about" id="about">
+            <h1 class="heading"><span>About</span> me</h1>
+            <div class="row">
+                <div class="about__info">
+                    <div class="box">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>May 29, 1996</span>
+                    </div>
+                    <div class="box">
+                        <i class="fas fa-mars"></i>
+                        <span>Male</span>
+                    </div>
+                    <div class="box">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:0942898298">094.2898.298</a>
+                    </div>
+                    <div class="box">
+                        <i class="far fa-envelope"></i>
+                        <a href="mailto:thanhnam290596@gmail.com" title="thanhnam290596@gmail.com">thanhnam290596@gmail.com</a>
+                    </div>
+                    <div class="box">
+                        <i class="fab fa-facebook-f"></i>
+                        <a href="https://www.facebook.com/thanhnam290596/" title="https://www.facebook.com/thanhnam290596/" target="_blank"> https://www.facebook.com/thanhnam290596/</a>
+                    </div>
+                    <div class="box">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <address>25 Lô D, Phạm Văn Chí, phường 7, Quận 6, HCM</address>
+                    </div>
+                </div>
+                <div class="about__content">
+                    <div class="box">
+                        <h3>Objective / Orientation</h3>
+                        <p>-Short-term: Looking forward to
+                            learning from experience, learning
+                            and improving ReactJS
+                            programming skills through working
+                            in the company.Improve thinking,
+                            learn about FrontEnd programming
+                            knowledge or some other Frontend
+                            / Backend framework, etc ... and
+                            gain work experience.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <h3><i class="fas fa-graduation-cap"></i>Education</h3>
+                        <p class="school-name">SAIGON TECHNOLOGY UNIVERSITY (STU)</p>
+                        <p class="datetime">10/2014 - 02/2020</p>
+                        <p class="faculty"><span>Faculty:</span> Information Technology</p>
+                        <p class="major"><span>Major</span>: Web programming</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About section end -->
+
+        <!-- Skills section start -->
+        <section class="skills" id="skills">
+            <h1 class="heading"><span>my</span> skill</h1>
+            <div class="row">
+                
+                <div class="progress programming-languages">
+                    <h1>programming languages</h1>
+                    <div class="box-container">
+                        <div class="box">
+                            <h3>HTML5, CSS3 <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="box">
+                            <h3>Javascript / ES6 <span>60%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="box">
+                            <h3>ReactJS <span%>60%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="box">
+                            <h3>NextJS <span>70%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="box">
+                            <h3>TailwindCSS <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="box">
+                            <h3>Ant Design <span>70%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress others">
+                    <h1>others</h1>
+                    <div class="box-container">
+                        <div class="box">
+                            <h3>XD Adobe <span>70%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="box">
+                            <h3>Figma <span>60%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="box">
+                            <h3>Github <span>60%</span></h3>
+                        <div class="bar"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skills section end -->
+
+        <!-- Portfolio section start -->
+        <section class="portfolio" id="portfolio">
+            <h1 class="heading"><span>my</span> projects</h1>
+            <div class="box-container">
+                <div class="box">
+                    <img src="./images/img-1.jpg" alt="">
+                    <div class="content">
+                        <h4>Project 1</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="./images/img-2.jpg" alt="">
+                    <div class="content">
+                        <h4>Project 2</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="./images/img-3.jpg" alt="">
+                    <div class="content">
+                        <h4>Project 3</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="./images/img-4.jpg" alt="">
+                    <div class="content">
+                        <h4>Project 4</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="./images/img-5.jpg" alt="">
+                    <div class="content">
+                        <h4>Project 5</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="./images/img-6.jpg" alt="">
+                    <div class="content">
+                        <h4>Project 6</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio section end -->
+
+        <!-- Contact section start -->
+        <section class="contact" id="contact">
+            <h1 class="heading"><span>contact</span> me</h1>
+            <form action="">
+                <input type="text" placeholder="your name" class="form-control">
+                <input type="email" placeholder="your email" class="form-control">
+                <input type="text" placeholder="subject" class="form-control">
+                <textarea name="message" id="" cols="30" rows="10" placeholder="message..."></textarea>
+                <input type="submit" value="send message" class="btn">
+            </form>
+        </section>
+        <!-- Contact section end -->
+    </main>
+
+    <!-- Footer start -->
+    <footer class="footer">
+        <div class="footer-credit">
+            <p>Created on <span>Thursday, September 30, 2021</span></p>
+        </div>
+    </footer>
+    <!-- Footer end -->
 
 
     <!-- Custom main JS -->
